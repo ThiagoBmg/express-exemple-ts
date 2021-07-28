@@ -2,11 +2,11 @@ import {Router} from 'express'
 
 interface IRouter{
     /* 
-    *  @Rotas de usuários
+    *  @Rotas-de-usuários
     */
     Users?():void
     /* 
-    *  @Rotas de Produtos
+    *  @Rotas-de-Produtos
     */
     Products?():void
 }
@@ -16,6 +16,7 @@ class Main_Router implements IRouter{
 
     constructor(){
         this.routes = Router()
+        //this.Users()
     }
 
     Users(){
