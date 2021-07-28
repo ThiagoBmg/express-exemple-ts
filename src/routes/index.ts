@@ -1,6 +1,17 @@
 import {Router} from 'express'
 
-class Main_Router{
+interface IRouter{
+    /* 
+    *  @Rotas de usuários
+    */
+    Users?():void
+    /* 
+    *  @Rotas de Produtos
+    */
+    Products?():void
+}
+
+class Main_Router implements IRouter{
     routes!: Router
 
     constructor(){
@@ -9,9 +20,9 @@ class Main_Router{
 
     Users(){
         this.routes.get('/users')
-        this.routes.post('')
-        this.routes.delete('')
-        this.routes.patch('')
+        this.routes.post('/users')
+        this.routes.delete('/users')
+        this.routes.patch('/users')
     }
 }
 
