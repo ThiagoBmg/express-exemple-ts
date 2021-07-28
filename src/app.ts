@@ -4,7 +4,7 @@ import helmet from 'helmet'
 import routes from './routes'
 
 class App{
-    public app!: express.Application
+    app!: express.Application
     
     public constructor(){        
         this.app = express()
@@ -12,13 +12,13 @@ class App{
         this.routes()
     }
    
-    private middlewares(){
+    private middlewares(): void{
         this.app.use(cors())
         this.app.use(helmet())
         this.app.use(express.json())
     }
 
-    private routes(){
+    private routes(): void{
         this.app.use(routes)
     }
 }
