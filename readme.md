@@ -1,3 +1,1 @@
-# Api com typecript
-
-Repositório para testes
+# Repositório para testes
